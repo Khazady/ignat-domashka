@@ -1,0 +1,18 @@
+@keyframes nameAnim {
+    from {
+        margin-top: 0
+    }
+    to {
+        margin-top: 270px
+    }
+}
+
+.name {
+    color: #282c34;
+    font-family: "Yu Gothic UI", sans-serif;
+    font-size: 30px;
+    letter-spacing: 8px;
+
+    animation: nameAnim 3s ease-in-out;
+    animation-fill-mode: forwards;
+}
