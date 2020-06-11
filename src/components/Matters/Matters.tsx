@@ -18,7 +18,7 @@ function Matters() {
 
     let [matters, setMatters] = useState<Array<mattersType>>(mattersInit);
 
-    function priorityClassToggler(matter: any) {
+    function priorityClassToggler(matter: mattersType) {
         return matter.priority === "high" ? classes.high : //В зависимости от приоритета лишки выбирается класс
           matter.priority === "medium" ? classes.medium :
             matter.priority === "low" ? classes.low :
