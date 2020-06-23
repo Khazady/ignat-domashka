@@ -4,7 +4,7 @@ import FullName from "./components/HomeWork1/FullName/FullName";
 import Message from "./components/HomeWork1/Message/Message";
 import Matters from './components/HomeWork2/Matters/Matters';
 import {BrowserRouter, Route, NavLink} from 'react-router-dom';
-import HomeWork3, {names} from "./components/HomeWork3/HomeWork3";
+import HomeWork3 from "./components/HomeWork3/HomeWork3";
 
 function App() {
     return (

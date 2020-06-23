@@ -1,13 +1,15 @@
-import React, {ChangeEvent, KeyboardEvent, useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 import classes from "./HomeWork3.module.css";
 import {v1} from "uuid";
+import Button from "../common/Button/Button";
+import Input from "../common/Input/Input";
 
 type namesType = {
     id: string
     name: string
 }
 
-export const names: Array<namesType> = [];
+ const names: Array<namesType> = [];
 
 function HomeWork3() {
     let [inputState, setInputState] = useState("");
@@ -26,17 +28,14 @@ function HomeWork3() {
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setInputState(e.currentTarget.value);
 
-    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => e.charCode === 13 && Hello();
-
     let alertAllNames = names.map(name => " " + name.name);
 
     return (
       <div className={classes.wrapper}>
-          <input className={classes.input} value={inputState} onChange={onChangeHandler}
-                 onKeyPress={onKeyPressHandler}/>
-          <button className={classes.button} onClick={Hello}> Hello</button>
+          <Input value={inputState} onChange={onChangeHandler} onEnter={Hello} error={!inputState}/>
+          <Button className={classes.button} onClick={Hello} text="Hello"/>
           <span className={classes.counter}>Names Counter: {namesLength}</span>
-          <button onClick={ ()=> {alert(alertAllNames)} }>Alert all names</button>
+          <Button text="Alert all names" onClick={ ()=> {alert(alertAllNames)} }/>
       </div>
     )
 }

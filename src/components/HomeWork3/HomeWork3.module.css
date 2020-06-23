@@ -2,22 +2,6 @@
     margin-top: 20%;
 }
 
-.input {
-    width: 300px;
-    height: 40px;
-    font-size: 30px;
-    border-radius: 10px;
-    outline: none;
-    border: 2px solid #8b8b8b;
-    padding: 2px  20px;
-    font-family: "Yu Gothic UI", sans-serif;
-}
-
-.input:focus {
-    border: 2px solid #9e1010;
-    box-shadow: 0 0 15px -3px rgba(153, 147, 153, 1);
-}
-
 .button {
     margin-left: 30px;
     background-color: #4CAF50;
