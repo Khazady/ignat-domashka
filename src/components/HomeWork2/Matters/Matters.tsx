@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import classes from "./Matters.module.css";
+import Button from "../../common/Button/Button";
+import {EditableSpan} from "../../common/EditableSpan/EditableSpan";
 
 type mattersType = {
     id: number
@@ -29,17 +31,17 @@ function Matters() {
             return (
               <li className={classes.list} key={matter.id}>
                   <div className={`${classes.priority} ${priorityClassToggler(matter)}`}>{matter.title} {matter.priority}</div>
-                  <button className={classes.low} onClick={ () => {removeMatter(matter.id)}}>X</button>
+                  <Button className={classes.low} onClick={ () => {removeMatter(matter.id)}} text="X"/>
               </li>
             )
         });
 
     let selector = <li className={classes.list}>
         <span>Sort by priority </span>
-        <button onClick={() => {filterMatters("all")} } className={classes.inactive}>All</button>
-        <button onClick={() => {filterMatters("high")} } className={classes.high}>High</button>
-        <button onClick={() => {filterMatters("medium")} } className={classes.medium}>Medium</button>
-        <button onClick={() => {filterMatters("low")} } className={classes.low}>Low</button>
+        <Button onClick={() => {filterMatters("all")} } className={classes.inactive} text="All"/>
+        <Button onClick={() => {filterMatters("high")} } className={classes.high} text="High"/>
+        <Button onClick={() => {filterMatters("medium")} } className={classes.medium} text="Medium"/>
+        <Button onClick={() => {filterMatters("low")} } className={classes.low} text="Low"/>
     </li>
 
     function removeMatter(id: number) {

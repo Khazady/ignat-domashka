@@ -3,17 +3,21 @@ import './App.css';
 import FullName from "./components/HomeWork1/FullName/FullName";
 import Message from "./components/HomeWork1/Message/Message";
 import Matters from './components/HomeWork2/Matters/Matters';
-import {BrowserRouter, Route, NavLink} from 'react-router-dom';
+import {Route, NavLink, HashRouter} from 'react-router-dom';
 import HomeWork3 from "./components/HomeWork3/HomeWork3";
+import { HomeWork4 } from './components/HomeWork4/HomeWork4';
+import { HomeWork5 } from './components/HomeWork5/HomeWork5';
 
 function App() {
     return (
 
-      <BrowserRouter>
+      <HashRouter>
           <div className="header">
               <NavLink exact to="/homework_1" className="hw" activeClassName="hw-active">Homework №1 </NavLink>
               <NavLink exact to="/homework_2" className="hw" activeClassName="hw-active">Homework №2 </NavLink>
               <NavLink exact to="/homework_3" className="hw" activeClassName="hw-active">Homework №3</NavLink>
+              <NavLink exact to="/homework_4" className="hw" activeClassName="hw-active">Homework №4</NavLink>
+              <NavLink exact to="/homework_5" className="hw" activeClassName="hw-active">Homework №5</NavLink>
           </div>
           <div className="App">
               <Route path="/homework_1" render={() => <FullName message="Тышкевич Михаил Казимирович"/>}/>
@@ -21,8 +25,10 @@ function App() {
                      render={() => <Message name="Kenshiro" message="Omae Wa Mou Shindeiru" time="04:20"/>}/>
               <Route path="/homework_2" render={() => <Matters/>}/>
               <Route path="/homework_3" render={() => <HomeWork3/>}/>
+              <Route path="/homework_4" render={() => <HomeWork4/>}/>
+              <Route path="/homework_5" render={() => <HomeWork5/>}/>
           </div>
-      </BrowserRouter>
+      </HashRouter>
 
     );
 }

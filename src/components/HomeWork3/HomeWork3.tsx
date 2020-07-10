@@ -3,6 +3,7 @@ import classes from "./HomeWork3.module.css";
 import {v1} from "uuid";
 import Button from "../common/Button/Button";
 import Input from "../common/Input/Input";
+import Checkbox from "../common/Checkbox/Checkbox";
 
 type namesType = {
     id: string
