@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ignat-domashka/static/css/main.e5f7fb6e.chunk.css",
-    "main.js": "/ignat-domashka/static/js/main.de96dfa5.chunk.js",
-    "main.js.map": "/ignat-domashka/static/js/main.de96dfa5.chunk.js.map",
+    "main.js": "/ignat-domashka/static/js/main.56910fa1.chunk.js",
+    "main.js.map": "/ignat-domashka/static/js/main.56910fa1.chunk.js.map",
     "runtime-main.js": "/ignat-domashka/static/js/runtime-main.2b1257fe.js",
     "runtime-main.js.map": "/ignat-domashka/static/js/runtime-main.2b1257fe.js.map",
-    "static/js/2.a77d344a.chunk.js": "/ignat-domashka/static/js/2.a77d344a.chunk.js",
-    "static/js/2.a77d344a.chunk.js.map": "/ignat-domashka/static/js/2.a77d344a.chunk.js.map",
+    "static/js/2.da13e25e.chunk.js": "/ignat-domashka/static/js/2.da13e25e.chunk.js",
+    "static/js/2.da13e25e.chunk.js.map": "/ignat-domashka/static/js/2.da13e25e.chunk.js.map",
     "index.html": "/ignat-domashka/index.html",
-    "precache-manifest.c90802c480702f3fdc4a4d2394f0579e.js": "/ignat-domashka/precache-manifest.c90802c480702f3fdc4a4d2394f0579e.js",
+    "precache-manifest.7330ae9069546173139a592f7168bb48.js": "/ignat-domashka/precache-manifest.7330ae9069546173139a592f7168bb48.js",
     "service-worker.js": "/ignat-domashka/service-worker.js",
     "static/css/main.e5f7fb6e.chunk.css.map": "/ignat-domashka/static/css/main.e5f7fb6e.chunk.css.map",
-    "static/js/2.a77d344a.chunk.js.LICENSE.txt": "/ignat-domashka/static/js/2.a77d344a.chunk.js.LICENSE.txt"
+    "static/js/2.da13e25e.chunk.js.LICENSE.txt": "/ignat-domashka/static/js/2.da13e25e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2b1257fe.js",
-    "static/js/2.a77d344a.chunk.js",
+    "static/js/2.da13e25e.chunk.js",
     "static/css/main.e5f7fb6e.chunk.css",
-    "static/js/main.de96dfa5.chunk.js"
+    "static/js/main.56910fa1.chunk.js"
   ]
 }
