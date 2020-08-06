@@ -10,11 +10,10 @@ type namesType = {
     name: string
 }
 
- const names: Array<namesType> = [];
+const names: Array<namesType> = [];
 
 function HomeWork3() {
     let [inputState, setInputState] = useState("");
-
     let [namesLength, setNamesLength] = useState(0);
 
     const Hello = () => {
@@ -26,10 +25,11 @@ function HomeWork3() {
         }
         return inputState && addNewName();
     };
-
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setInputState(e.currentTarget.value);
-
     let alertAllNames = names.map(name => " " + name.name);
+
+    let [check, setCheck] = useState(false);
+    const onCheckboxChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setCheck(e.currentTarget.checked)
 
     return (
       <div className={classes.wrapper}>
@@ -37,6 +37,7 @@ function HomeWork3() {
           <Button className={classes.button} onClick={Hello} text="Hello"/>
           <span className={classes.counter}>Names Counter: {namesLength}</span>
           <Button text="Alert all names" onClick={ ()=> {alert(alertAllNames)} }/>
+          <Checkbox onChange={ onCheckboxChangeHandler} checked={check} labelText={"Checkbox button"}/>
       </div>
     )
 }

@@ -1,17 +1,25 @@
-import React, {MouseEvent, useState} from "react";
-import {optionsStateType} from "../../HomeWork7/HomeWork7";
+import React, { ChangeEvent } from "react";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import {Radio} from "@material-ui/core";
 
-type SelectPropsType = {
-    optionsState: Array<optionsStateType>
-    onChange: () => void
-    name: string
+type ItemType = {
+    title: string
+    value: any
 }
 
-export function Radio(props: SelectPropsType) {
+export type RadioPropsType = {
+    value?: any
+    onChange: (value: any) => void
+    items: Array<ItemType>
+}
 
+function MyRadio(props: RadioPropsType) {
     return (
-      <>
-        {props.optionsState.map(option => <label><input type="radio" key={option.value} name={props.name} onChange={()=>props.onChange()}/>{option.title}</label>)}
-      </>
+      <RadioGroup aria-label="city" name="city1" value={props.value} onChange={event => props.onChange(event.currentTarget.value)}>
+          {props.items.map( (option)=> <FormControlLabel value={option.value} control={<Radio />} label={option.title} /> )}
+      </RadioGroup>
     )
 }
+
+export default MyRadio

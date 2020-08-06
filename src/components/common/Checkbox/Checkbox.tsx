@@ -1,20 +1,18 @@
-import React, {DetailedHTMLProps, InputHTMLAttributes} from "react";
+import React, {ChangeEvent, useState} from "react";
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 import classes from "./Checkbox.module.css";
 
-export type CheckboxProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
-  & {
-    text: string
-    onEnter?: () => void
+export type CheckboxProps = {
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void
+    labelText: string
+    checked: boolean
 };
 
-function Checkbox(props: CheckboxProps) {
-
+function MyCheckbox(props: CheckboxProps) {
     return (
-      <>
-          <input className={classes.input} type="checkbox" id="todo" name="todo" value="todo" onChange={() => {}}/>
-          <label className={classes.label} htmlFor="todo" data-content={props.text}>{props.text}</label>
-      </>
+          <FormControlLabel label={props.labelText} control={<Checkbox color="primary" checked={props.checked} onChange={props.onChange}/>}/>
     )
 }
 
-export default Checkbox;
+export default MyCheckbox;

@@ -27,5 +27,5 @@ export function EditableSpan(props: EditableSpanPropsType) {
                onChange={onChangeHandler}
                onKeyPress={onKeyPressHandler}
       />
-      : <span onDoubleClick={() => activateEditMode()}>{props.value}</span>
+      : <span onClick={() => activateEditMode()}>{props.value}</span>
 }
