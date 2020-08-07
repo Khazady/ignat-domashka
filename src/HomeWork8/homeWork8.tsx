@@ -7,7 +7,7 @@ export function HomeWork8() {
         {id: "1", name: "Daniel", age: 17},
         {id: "2", name: "Andrew", age: 25},
         {id: "3", name: "Michael", age: 43},
-        {id: "3", name: "John", age: 12},
+        {id: "4", name: "John", age: 12},
     ])
     let ascending = () => {
         setState(homeWork8Reducer(state, sortAC("up")))
