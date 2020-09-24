@@ -10,9 +10,7 @@ export const homeWork8Reducer = (state: homeWorkReducerStateType, action: homeWo
         case SORT:
             switch (action.payload) {
                 case "up":
-                    debugger
                   let Sstate = [...state.map(p => p).sort((a, b) => a.name > b.name ? 1 : -1)]
-                  debugger
                   //return [...state.sort((a, b) => a.name > b.name ? 1 : -1)]
                     return Sstate
                 case "down":
