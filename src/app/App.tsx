@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
-import FullName from "./components/HomeWork1/FullName/FullName";
-import Message from "./components/HomeWork1/Message/Message";
-import Matters from './components/HomeWork2/Matters/Matters';
+import FullName from "../components/HomeWork1/FullName/FullName";
+import Message from "../components/HomeWork1/Message/Message";
+import Matters from '../components/HomeWork2/Matters/Matters';
 import {Route, NavLink, HashRouter} from 'react-router-dom';
-import HomeWork3 from "./components/HomeWork3/HomeWork3";
-import { HomeWork4 } from './components/HomeWork4/HomeWork4';
-import { HomeWork5 } from './components/HomeWork5-6/HomeWork5';
-import {HomeWork7} from "./components/HomeWork7/HomeWork7";
-import { HomeWork8 } from './HomeWork8/homeWork8';
-import { HomeWork9 } from './HomeWork9/homeWork9';
+import HomeWork3 from "../components/HomeWork3/HomeWork3";
+import { HomeWork4 } from '../components/HomeWork4/HomeWork4';
+import { HomeWork5 } from '../components/HomeWork5-6/HomeWork5';
+import {HomeWork7} from "../components/HomeWork7/HomeWork7";
+import { HomeWork8 } from '../HomeWork8/homeWork8';
+import { HomeWork9 } from '../HomeWork9/homeWork9';
+import {HomeWork10} from "../HomeWork10/HomeWork10";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
               <NavLink exact to="/homework_7" className="hw" activeClassName="hw-active">Homework №7</NavLink>
               <NavLink exact to="/homework_8" className="hw" activeClassName="hw-active">Homework №8</NavLink>
               <NavLink exact to="/homework_9" className="hw" activeClassName="hw-active">Homework №9</NavLink>
+              <NavLink exact to="/homework_10" className="hw" activeClassName="hw-active">Homework №10</NavLink>
           </div>
           <div className="App">
               <Route path="/homework_1" render={() => <FullName message="Тышкевич Михаил Казимирович"/>}/>
@@ -36,6 +38,7 @@ function App() {
               <Route path="/homework_7" render={() => <HomeWork7/>}/>
               <Route path="/homework_8" render={() => <HomeWork8 />}/>
               <Route path="/homework_9" render={() => <HomeWork9 />}/>
+              <Route path="/homework_10" render={() => <HomeWork10 />}/>
           </div>
       </HashRouter>
 
