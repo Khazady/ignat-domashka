@@ -5,7 +5,6 @@ const initState = {
 export const themeReducer = (state = initState, action: changeThemeACType) => {
     switch (action.type) {
         case "CHANGE-THEME": {
-            debugger
             return {...state, currentTheme: action.currentTheme}
         }
         default:

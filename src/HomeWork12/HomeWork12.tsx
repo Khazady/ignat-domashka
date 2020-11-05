@@ -18,7 +18,6 @@ export const themes: themesType[] = [
     {value: 'some', title: "some"}]
 
 export function HomeWork12() {
-    debugger
     const theme = useSelector<AppStoreType, string>(state => state.currentTheme.currentTheme)
     const [value, setValue] = useState(themes[0].value)
     const dispatch = useDispatch();
