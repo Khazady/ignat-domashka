@@ -1,7 +1,6 @@
-import React, {ChangeEvent, useState} from "react";
+import React, {ChangeEvent} from "react";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import classes from "./Checkbox.module.css";
 
 export type CheckboxProps = {
     onChange: (e: ChangeEvent<HTMLInputElement>) => void
