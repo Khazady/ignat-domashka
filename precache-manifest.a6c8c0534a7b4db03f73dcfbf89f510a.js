@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "57fe2d2c490673cb91ded7b64abf45bb",
+    "revision": "296aa8234da55ab97994d717b8637c4d",
     "url": "/ignat-domashka/index.html"
   },
   {
-    "revision": "579561acf477d45e2d9e",
+    "revision": "1bd505c62fc4fef5d8c4",
     "url": "/ignat-domashka/static/css/main.625c6d46.chunk.css"
   },
   {
-    "revision": "8747717592edf2d7832f",
-    "url": "/ignat-domashka/static/js/2.d4eb350f.chunk.js"
+    "revision": "617fba7490832597a16c",
+    "url": "/ignat-domashka/static/js/2.1f23efb8.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/ignat-domashka/static/js/2.d4eb350f.chunk.js.LICENSE.txt"
+    "url": "/ignat-domashka/static/js/2.1f23efb8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "579561acf477d45e2d9e",
-    "url": "/ignat-domashka/static/js/main.1e2c9a13.chunk.js"
+    "revision": "1bd505c62fc4fef5d8c4",
+    "url": "/ignat-domashka/static/js/main.af084544.chunk.js"
   },
   {
     "revision": "17a6c1d3b0b6da89a84c",
