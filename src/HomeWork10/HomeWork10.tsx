@@ -6,10 +6,9 @@ import {Preloader} from "../components/common/Preloader/Preloader";
 import {loadingAC} from "./loadingReducer";
 
 export function HomeWork10() {
-    debugger
     const dispatch = useDispatch();
 
-    const loading = useSelector<AppStoreType, { loading: boolean }>(state => state.loading);
+    const loading = useSelector<AppStoreType, boolean>(state => state.loading.loading);
 
     const setLoading = () => {
         dispatch(loadingAC(true))
@@ -21,7 +20,7 @@ export function HomeWork10() {
 
     return (
       <div>
-          {loading.loading
+          {loading
             ? <Preloader/>
             : <Button onClick={setLoading}>set loading...</Button>
           }

@@ -2,10 +2,9 @@ const initState = {
     loading: false
 };
 
-export const loadingReducer = (state = initState, action: ActionsType) => {
+export const loadingReducer = (state = initState, action: loadingACType) => {
     switch (action.type) {
         case "CHANGE-LOADING":
-            debugger
             return {...state, loading: action.loading}
         default:
             return state;
@@ -16,4 +15,3 @@ export const loadingAC = (loading: boolean) => ({type: "CHANGE-LOADING", loading
 
 // types
 export type loadingACType = ReturnType<typeof loadingAC>
-export type ActionsType = | loadingACType

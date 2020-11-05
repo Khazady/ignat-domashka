@@ -12,6 +12,7 @@ import { HomeWork8 } from '../HomeWork8/homeWork8';
 import { HomeWork9 } from '../HomeWork9/homeWork9';
 import {HomeWork10} from "../HomeWork10/HomeWork10";
 import { HomeWork11 } from '../HomeWork11/HomeWork11';
+import { HomeWork12 } from '../HomeWork12/HomeWork12';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
               <NavLink exact to="/homework_9" className="hw" activeClassName="hw-active">Homework №9</NavLink>
               <NavLink exact to="/homework_10" className="hw" activeClassName="hw-active">Homework №10</NavLink>
               <NavLink exact to="/homework_11" className="hw" activeClassName="hw-active">Homework №11</NavLink>
+              <NavLink exact to="/homework_12" className="hw" activeClassName="hw-active">Homework №12</NavLink>
           </div>
           <div className="App">
               <Route path="/homework_1" render={() => <FullName message="Тышкевич Михаил Казимирович"/>}/>
@@ -42,6 +44,7 @@ function App() {
               <Route path="/homework_9" render={() => <HomeWork9 />}/>
               <Route path="/homework_10" render={() => <HomeWork10 />}/>
               <Route path="/homework_11" render={() => <HomeWork11 />}/>
+              <Route path="/homework_12" render={() => <HomeWork12 />}/>
           </div>
       </HashRouter>
 
