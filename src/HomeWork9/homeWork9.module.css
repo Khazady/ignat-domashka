@@ -1,3 +1,10 @@
-.Block {
-    margin-top: 50%;
+.clock {
+    font-size: 40px;
+}
+
+.date {
+    font-size: 25px;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
 }

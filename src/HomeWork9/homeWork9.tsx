@@ -1,30 +1,58 @@
 import React, {useState} from "react";
-import moment from "moment";
-import {Button} from "@material-ui/core";
-import classes from "./homeWork9.module.css";
+import Button from "@material-ui/core/Button";
+import styles from "./homeWork9.module.css"
+
 
 export function HomeWork9() {
-    let time = moment().format('h:mm:ss a')
-    let [seconds, setSeconds] = useState(time);
+    const get2DigitsString = (num: number) => num < 10 ? "0" + num : num
 
-    const [timerId, setTimerId] = useState<any>(0);
+    const [date, setDate] = useState(new Date())
+    const [id, setId] = useState<number>(0)
+    const [show, setShow] = useState<boolean>(false)
 
-    let refresh = () => {
-        const timer_id = setInterval(() => {
-            let a = moment().format('h:mm:ss a');
-            setSeconds(a)
+    const stop = () => clearInterval(id)
+
+    const start = () => {
+        stop();
+        const id: number = window.setInterval(() => {
+            setDate(new Date())
         }, 1000);
-        setTimerId(timer_id);
+        setId(id);
     }
 
-    let stop = () => {
-        clearInterval(timerId);
+    const stringTime = <>
+        <span>{get2DigitsString(date.getHours())}</span>
+        :
+        <span>{get2DigitsString(date.getMinutes())}</span>
+        :
+        <span>{get2DigitsString(date.getSeconds())}</span>
+    </>
+
+    const onMouseEnter = () => {
+        setShow(true)
     }
+
+    const onMouseLeave = () => {
+        setShow(false)
+    }
+
+    const stringDate = <>
+        <span>{get2DigitsString(date.getDay())}</span>
+        .
+        <span>{get2DigitsString(date.getMonth())}</span>
+        .
+        <span>{get2DigitsString(date.getFullYear())}</span>
+    </>
+
+
     return (
-      <div className={classes.Block}>
-          <div onMouseOver={ ()=> {} }>{seconds}</div>
-          <Button onClick={refresh}>REFRESH</Button>
-          <Button onClick={stop}>STOP</Button>
+      <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+          <div>
+              <div className={styles.clock}>{stringTime}</div>
+              <Button variant="contained" color="primary" onClick={start}>start</Button>
+              <Button variant="contained" color="secondary" onClick={stop}>stop</Button>
+          </div>
+          {show && <span className={styles.date}>{stringDate}</span>}
       </div>
     )
 }
