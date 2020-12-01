@@ -12,6 +12,11 @@ export const HomeWork13 = () => {
             //setChecked(res.data.yourBody.success)
             setChecked(e.currentTarget.checked)
             setResponse(res)
+        }).catch(error => {
+            debugger
+            console.log({...error});
+            console.log(error.response ? error.response.data.errorText : error.message);
+            setResponse(error.response ? error.response.data.errorText : error.message)
         })
     }
     return <>
